@@ -307,7 +307,7 @@ func fetch(datastore database.Datastore) (bool, []database.VulnerabilityWithAffe
 	return status, addMetadata(datastore, vulnerabilities), flags, notes
 }
 
-// Add metadata to the specified vulnerabilities using the registered
+// addMetadata; Add metadata to the specified vulnerabilities using the registered
 // MetadataFetchers, in parallel.
 func addMetadata(datastore database.Datastore, vulnerabilities []database.VulnerabilityWithAffected) []database.VulnerabilityWithAffected {
 	if len(vulnmdsrc.Appenders()) == 0 || len(vulnerabilities) == 0 {
@@ -510,7 +510,7 @@ func setLastUpdateTime(datastore database.Datastore) error {
 	return tx.Commit()
 }
 
-// isVulnerabilityChange compares two vulnerabilities by their severity and
+// isVulnerabilityChanged compares two vulnerabilities by their severity and
 // affected features, and return true if they are different.
 func isVulnerabilityChanged(a *database.VulnerabilityWithAffected, b *database.VulnerabilityWithAffected) bool {
 	if a == b {

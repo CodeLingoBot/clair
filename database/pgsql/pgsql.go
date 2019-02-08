@@ -254,7 +254,7 @@ func parseConnectionString(source string) (dbName string, pgSourceURL string, er
 	return
 }
 
-// migrate runs all available migrations on a pgSQL database.
+// migrateDatabase runs all available migrations on a pgSQL database.
 func migrateDatabase(db *sql.DB) error {
 	log.Info("running database migrations")
 

@@ -230,7 +230,7 @@ func (u *updater) Update(datastore database.Datastore) (resp vulnsrc.UpdateRespo
 	return resp, nil
 }
 
-// Get the latest modification time of a remote file
+// getLatestModifiedTime gets the latest modification time of a remote file
 // expressed as unix time
 func getLatestModifiedTime(url string) (int64, error) {
 	resp, err := http.Head(url)

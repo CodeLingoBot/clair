@@ -177,7 +177,7 @@ func (p parser) Compare(a, b string) (int, error) {
 	return rpmvercmp(v1.release, v2.release), nil
 }
 
-// rpmcmpver compares two version or release strings.
+// rpmvercmp; rpmcmpver compares two version or release strings.
 //
 // Lifted from github.com/cavaliercoder/go-rpm.
 // For the original C implementation, see:

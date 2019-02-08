@@ -21,7 +21,7 @@ import (
 	"github.com/lib/pq"
 )
 
-// NOTE(Sida): Every search query can only have count less than postgres set
+// querySearchLastDeletedVulnerabilityID; NOTE(Sida): Every search query can only have count less than postgres set
 // stack depth. IN will be resolved to nested OR_s and the parser might exceed
 // stack depth. TODO(Sida): Generate different queries for different count: if
 // count < 5120, use IN; for count > 5120 and < 65536, use temporary table; for
@@ -142,7 +142,7 @@ func queryPersistLayerNamespace(count int) string {
 		"detector_id")
 }
 
-// size of key and array should be both greater than 0
+// queryString; size of key and array should be both greater than 0
 func queryString(keySize, arraySize int) string {
 	if arraySize <= 0 || keySize <= 0 {
 		panic("Bulk Query requires size of element tuple and number of elements to be greater than 0")

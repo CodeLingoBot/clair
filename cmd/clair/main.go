@@ -155,7 +155,7 @@ func Boot(config *Config) {
 	st.Stop()
 }
 
-// Initialize logging system
+// configureLogger; Initialize logging system
 func configureLogger(flagLogLevel *string) {
 	logLevel, err := log.ParseLevel(strings.ToUpper(*flagLogLevel))
 	if err != nil {

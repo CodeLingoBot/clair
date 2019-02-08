@@ -172,7 +172,7 @@ func RegisterAncestryServiceHandler(ctx context.Context, mux *runtime.ServeMux, 
 	return RegisterAncestryServiceHandlerClient(ctx, mux, NewAncestryServiceClient(conn))
 }
 
-// RegisterAncestryServiceHandler registers the http handlers for service AncestryService to "mux".
+// RegisterAncestryServiceHandlerClient registers the http handlers for service AncestryService to "mux".
 // The handlers forward requests to the grpc endpoint over the given implementation of "AncestryServiceClient".
 // Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "AncestryServiceClient"
 // doesn't go through the normal gRPC flow (creating a gRPC client etc.) then it will be up to the passed in
@@ -283,7 +283,7 @@ func RegisterNotificationServiceHandler(ctx context.Context, mux *runtime.ServeM
 	return RegisterNotificationServiceHandlerClient(ctx, mux, NewNotificationServiceClient(conn))
 }
 
-// RegisterNotificationServiceHandler registers the http handlers for service NotificationService to "mux".
+// RegisterNotificationServiceHandlerClient registers the http handlers for service NotificationService to "mux".
 // The handlers forward requests to the grpc endpoint over the given implementation of "NotificationServiceClient".
 // Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "NotificationServiceClient"
 // doesn't go through the normal gRPC flow (creating a gRPC client etc.) then it will be up to the passed in
@@ -394,7 +394,7 @@ func RegisterStatusServiceHandler(ctx context.Context, mux *runtime.ServeMux, co
 	return RegisterStatusServiceHandlerClient(ctx, mux, NewStatusServiceClient(conn))
 }
 
-// RegisterStatusServiceHandler registers the http handlers for service StatusService to "mux".
+// RegisterStatusServiceHandlerClient registers the http handlers for service StatusService to "mux".
 // The handlers forward requests to the grpc endpoint over the given implementation of "StatusServiceClient".
 // Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "StatusServiceClient"
 // doesn't go through the normal gRPC flow (creating a gRPC client etc.) then it will be up to the passed in
